@@ -9,7 +9,7 @@ char dmgM(struct classe mob, struct classe player){
 }
 
 char dodge(struct classe player, struct classe mob){
-    rand()
+    return rand() % 2;
 }
 
 char state(struct classe player, struct classe mob){
