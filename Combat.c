@@ -26,7 +26,11 @@ char dodge(struct classe player, struct classe mob){
 }
 
 char state(struct classe player, struct classe mob){
-    ettere
+    if(player.vie == 0)return 0;
+    if(mob.vie==0)return 1;
+    return 2;
 }
 
-char combat();
+char combat(struct classe player, struct classe mob){
+    
+}
