@@ -1,5 +1,9 @@
-char dmg(struct classe player, struct classe mob){
-    
+char dmgP(struct classe player, struct classe mob){
+
+}
+
+char dmgM(struct classe mob, struct classe player){
+
 }
 
 char dodge(struct classe player, struct classe mob){
