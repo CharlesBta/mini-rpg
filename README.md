@@ -2,7 +2,7 @@
 
 1. Classe -> struc
    - Distance -> struc
-    - Nom -> char
+    - Nom -> char -> Distance : D / Rapproché : R / Boss : B
     - Degats -> char
     - VieMax -> char 0-10
    
