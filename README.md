@@ -20,5 +20,7 @@
    - Degats -> char function(classe Joueur, classe Enemie)
    - Esquive -> char function(classe Joueur, classe Enemie)
    - Etat -> char function(struc Joueur, struc Enemie) return vivant/mort
+  
+   - 0 si victoire joeur / 1 si defaite joueur
    
 5. Histoire
