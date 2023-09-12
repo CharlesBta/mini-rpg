@@ -1,20 +1,26 @@
 #include <stdio.h>
 
 struct classe {
-    char Distance;
-    char Rapproche;
-    char Boss;
+    char Nom;
     char degats;
     char vie_max;
 
 };
 int main() {
-    struct classe init;
-    init.Distance = 'D';
-    init.Rapproche = 'R';
-    init.Boss = 'B';
-    init.degats = 1;
-    init.vie_max = 10;
+    struct classe distance;
+    distance.Nom = 'D';
+    distance.degats = 1;
+    distance.vie_max = 10;
+
+    struct classe rapproche;
+    distance.Nom = 'R';
+    distance.degats = 1;
+    distance.vie_max = 10;
+
+    struct classe boss;
+    distance.Nom = 'B';
+    distance.degats = 1;
+    distance.vie_max = 10;
 
     return 0;
 }
