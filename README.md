@@ -1,8 +1,8 @@
 # mini-rpg
 
 1. Classe -> struc
-   - Distance -> struc
-    - Nom -> char -> Distance : D / Rapproché : R / Boss : B
+   - Nom -> char
+    - Type -> char -> Distance : D / Rapproché : R / Boss : B
     - Degats -> char
     - VieMax -> char 0-10
    
