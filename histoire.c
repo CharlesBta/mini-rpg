@@ -14,18 +14,6 @@ printf("Vous voilà donc prêt à combattre !\n") ;
 }
 
 
-int end() {
-    char result;
-    result = combat(struct classe player, struct classe mob);
-    if (result == 0) {
-        printf("Bravo, vous avez vaincu le Boss final.\n");
-        printf("Après toutes ces années de travail acharné et d'entrainement.\n J'ai enfin réussi a venger ma soeur.");
-    } else if (result == 1) {
-        printf("Vous êtes mort.\n");
-    }
-}
-
-
 int middle () {
     char result;
     result = combat (struct classe player, struct classe mob);
@@ -51,4 +39,16 @@ int middle () {
 
     printf("Te voila enfin $ je t attendais depuis tout ce temps, j ai attendu ce combat toute ma vie\n");
     return 0;
+}
+
+
+int end() {
+    char result;
+    result = combat(struct classe player, struct classe mob);
+    if (result == 0) {
+        printf("Bravo, vous avez vaincu le Boss final.\n");
+        printf("Après toutes ces années de travail acharné et d'entrainement.\n J'ai enfin réussi a venger ma soeur.");
+    } else if (result == 1) {
+        printf("Vous êtes mort.\n");
+    }
 }
