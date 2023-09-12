@@ -32,5 +32,8 @@ char state(struct classe player, struct classe mob){
 }
 
 char combat(struct classe player, struct classe mob){
-    
+    dmgP()
+    if (state(struct classe player, struct classe mob)!=2) {
+        
+    }
 }
