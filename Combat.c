@@ -54,6 +54,7 @@ char state(struct classe player, struct classe mob){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 char combat();
 
 struct Joueur {
@@ -62,10 +63,17 @@ struct Joueur {
     int esquive;
 };
 =======
+=======
+// 0 victoire joueur 1 defaite joueur
+>>>>>>> e89c0cc966681be777ed3a0ca696f4e348abeaef
 char combat(struct classe player, struct classe mob){
-    dmgP()
-    if (state(struct classe player, struct classe mob)!=2) {
-        
-    }
+    if (state(struct classe player, struct classe mob)==2){
+        dmgP(struct classe player, struct classe mob);
+        if (state(struct classe player, struct classe mob)==2) {
+            dmgM(struct classe mob, struct classe player);
+            return combat(struct classe player, struct classe mob);
+        }
+    }else if (state(struct classe player, struct classe mob)==0) return 1;
+    else if (state(struct classe player, struct classe mob)==1) return 0;
 }
 >>>>>>> 936c5ea9c60e3f9dd9521f773321573745fb5cf9
