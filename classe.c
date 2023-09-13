@@ -1,20 +1,29 @@
-#include <stdio.h>
-
-struct classe {
-    char Distance;
-    char Rapproche;
-    char Boss;
-    char degats;
-    char vie_max;
-
+struct joueur{
+    char type;
+    char pseudo;
+    char vie;
+    char dmg;
 };
-int main() {
-    struct classe init;
-    init.Distance = 'D';
-    init.Rapproche = 'R';
-    init.Boss = 'B';
-    init.degats = 1;
-    init.vie_max = 10;
 
+struct ennemie{
+    char type;
+    char vie;
+    char dmg;
+};
+
+struct joueur player;
+char maj(char nom, char classe){
+    player.type = classe;
+    player.pseudo = nom;
+    player.vie = 10;
+    player.dmg = 1;
+    return 0;
+}
+
+struct ennemie mob;
+char creat_pers(char classeMob){
+    mob.type = classeMob;
+    mob.vie = 10;
+    mob.dmg = 1;
     return 0;
 }
