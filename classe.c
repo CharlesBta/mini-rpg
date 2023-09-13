@@ -1,28 +1,28 @@
-struct joueur{
+struct Joueur{
     char type;
     char pseudo;
     char vie;
     char dmg;
 };
 
-struct ennemie{
+struct Ennemie{
     char type;
     char vie;
     char dmg;
 };
 
-struct joueur player;
-char maj(char nom, char classe){
-    player.type = classe;
+struct Joueur player;
+int maj(char nom, char spec){
+    player.type = spec;
     player.pseudo = nom;
     player.vie = 10;
     player.dmg = 1;
     return 0;
 }
 
-struct ennemie mob;
-char creat_pers(char classeMob){
-    mob.type = classeMob;
+struct Ennemie mob;
+int creat_pers(char spec){
+    mob.type = spec;
     mob.vie = 10;
     mob.dmg = 1;
     return 0;

@@ -20,7 +20,7 @@ printf("Vous voilà donc prêt à combattre !\n") ;
 
 int middle () {
     char result;
-    result = combat (struct classe player, struct classe mob);
+    //result = combat (struct classe player, struct classe mob);
     printf("Voilà, je viens de trouver le repère de $\n");
     printf("Ahah, il m'a envoyé ses chiens de garde en guise d'échauffement\n");
 
@@ -48,7 +48,7 @@ int middle () {
 
 int end() {
     char result;
-    result = combat(struct classe player, struct classe mob);
+    //result = combat(struct classe player, struct classe mob);
     if (result == 0) {
         printf("Bravo, vous avez vaincu le Boss final.\n");
         printf("Après toutes ces années de travail acharné et d'entrainement.\n J'ai enfin réussi à venger ma soeur.");
