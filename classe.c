@@ -1,17 +1,19 @@
-struct Joueur{
+#include <stdlib.h>
+
+struct pers{
     char type;
     char pseudo;
     char vie;
     char dmg;
 };
 
-struct Ennemie{
+struct mob{
     char type;
     char vie;
     char dmg;
 };
 
-struct Joueur player;
+struct pers player;
 int maj(char nom, char spec){
     player.type = spec;
     player.pseudo = nom;
@@ -20,7 +22,7 @@ int maj(char nom, char spec){
     return 0;
 }
 
-struct Ennemie mob;
+struct mob mob;
 int creat_pers(char spec){
     mob.type = spec;
     mob.vie = 10;

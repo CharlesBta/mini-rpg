@@ -4,7 +4,7 @@
 
 int main() {
     start();
-    maj(pseudo,classe);
-    printf("%d",player.type);
+    //maj(pseudo,classe);
+    //printf("%d",player.type);
     return 0;
 }
