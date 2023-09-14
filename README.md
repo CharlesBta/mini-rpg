@@ -17,8 +17,8 @@
    - Vie -> char
 
 4. Combat
-   - Degats -> char function(classe pers, classe Enemie)
-   - Esquive -> char function(classe pers, classe Enemie)
+   - Degats -> char function(spec pers, spec Enemie)
+   - Esquive -> char function(spec pers, spec Enemie)
    - Etat -> char function(struc pers, struc Enemie) return vivant/mort
   
    - 0 si victoire joeur / 1 si defaite pers

@@ -1,19 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Combat.c"
-#include "classe.c"
+#include "type.c"
 
 
 char pseudo;
-char classe;
+char spec;
 
 int start () {
 printf("Vous êtes un chasseur de prime réputé pour votre détermination. Etant enfant, votre petite soeur s'est faite enlevée par le montre $. Depuis, votre seul but est de venger votre soeur et protéger le village.\n");
 printf("Choisissez un pseudo (une seule lettre) : \n") ;
 scanf("%c",&pseudo);
 getchar();
-printf("Maintenant, choisissez une classe. Si vous préférez combattre avec vos poings, prenez la classe rapprochée 'R'. Si vous adorez utiliser un arc, choisissez la classe distance 'D': \n") ;
-scanf("%c",&classe);
+printf("Maintenant, choisissez une spec. Si vous préférez combattre avec vos poings, prenez la spec rapprochée 'R'. Si vous adorez utiliser un arc, choisissez la spec distance 'D': \n") ;
+scanf("%c",&spec);
 getchar();
 printf("Vous voilà donc prêt à combattre !\n") ;
 
@@ -21,7 +21,7 @@ printf("Vous voilà donc prêt à combattre !\n") ;
 
 int middle () {
     char result;
-    //result = combat (struct classe player, struct classe mob);
+    //result = combat (struct spec player, struct spec mob);
     printf("Voilà, je viens de trouver le repère de $\n");
     printf("Ahah, il m'a envoyé ses chiens de garde en guise d'échauffement\n");
 
@@ -49,7 +49,7 @@ int middle () {
 
 int end() {
     char result;
-    //result = combat(struct classe player, struct classe mob);
+    //result = combat(struct spec player, struct spec mob);
     if (result == 0) {
         printf("Bravo, vous avez vaincu le Boss final.\n");
         printf("Après toutes ces années de travail acharné et d'entrainement.\n J'ai enfin réussi à venger ma soeur.");

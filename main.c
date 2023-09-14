@@ -6,7 +6,7 @@
 int main() {
     printf("Hello world\n");
     start();
-    maj(pseudo,classe);
+    maj(pseudo, spec);
     printf("%c",Player.type);
     return 0;
 }
