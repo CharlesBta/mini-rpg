@@ -3,5 +3,4 @@ project(mini_rpg C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(mini_rpg main.c
-        Combat.c)
+add_executable(mini_rpg main.c)
