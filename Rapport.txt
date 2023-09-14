@@ -31,3 +31,11 @@ Le joueur progresse dans l'histoire en remportant une série de combats contre d
 Le programme utilise des structures de données pour stocker les informations du joueur et des ennemis. Cela permet une gestion efficace des données et facilite la mise en place des combats et de l'histoire.
 Ainsi, l'histoire donne un contexte clair au joueur et un antagoniste (le monstre "$"). Cela crée une motivation pour le joueur et rend les combats significatifs.
 
+FONCTIONNEMENT COLLABORATIF
+Les trois programmes fonctionnent ensemble pour créer une expérience de jeu fluide et immersive.
+Le joueur commence par utiliser le programme d'initialisation pour personnaliser son personnage.
+Ensuite, le programme de création d'ennemi est utilisé à différents moments du jeu. Les ennemis créés sont stockés dans la structure Mob.
+Une fois le joueur initialisé et les ennemis créés, le système de combat initial entre en jeu. Le joueur utilise la fonction combat pour interagir avec les ennemis. Les mécanismes de combat, tels que les dégâts, les esquives et l'état du combat, sont gérés par les fonctions du système de combat initial.
+Le programme narratif utilise le système de combat pour créer une expérience de jeu. Le joueur doit réussir une série de combats pour progresser dans l'histoire, atteindre le boss final et accomplir l'objectif de venger sa sœur.
+L'intégration réussie de ces trois programmes offre une expérience de jeu avec un contexte narratif, une progression basée sur des combats stratégiques et une personnalisation du personnage. Cependant, ce projet peut encore être étendu pour inclure davantage de fonctionnalités, de niveaux, d'objets, de capacités spéciales, et d'autres éléments pour améliorer l'expérience globale du joueur et créer un jeu plus complet et riche en fonctionnalités.
+
