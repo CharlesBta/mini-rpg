@@ -1,44 +1,16 @@
 #include <stdlib.h>
+#include "type.c"
 
-char dmgP(struct classe player, struct classe mob){// D distance R rapproché et B boss
-
-    if (dodge(struct classe player, struct classe mob) == 0){
-        return 0;
-    }
-    else
-
-    if (mob.type == 'D' && player.type == 'R'){
-        mob.life -= player.dmg*2;
-    }else if (mob.type == 'D' && player.type == 'D'){
-        mob.life -= player.dmg;
-    }else if (mob.type == 'R' && player.type == 'D'){
-        mob.life -= player.dmg*3;
-    }
-    else if (mob.type == 'B'){
-        mob.life -= player.dmg;
-    }
-    return mob.life;
-
-}
-
-char dmgM(struct classe mob, struct classe player){
-
-    if(player.type == 'D' && mob.type == 'R'){
-        player.life -= mob.dmg*;
-    }else if (player.type == 'R'){
-        player.life -= mob.dmg;
-    }
-}
-
-char dodge(struct classe player, struct classe mob){
+// 0 si esquive
+int DodgeP(){
     float Pluck, Mluck;
 
-    if(player.type == 'D') Pluck = 80;
-    else if(player.type == 'R') Pluck = 60;
+    if(Player.type == 'D') Pluck = 70;
+    else if(Player.type == 'R') Pluck = 60;
 
-    if(mob.type == 'D') Mluck = 35;
-    else if(mob.type == 'R') Mluck = 10;
-    else if(mob.type == 'B') Mluck = 60;
+    if(Mob.type == 'D') Mluck = 35;
+    else if(Mob.type == 'R') Mluck = 10;
+    else if(Mob.type == 'B') Mluck = 60;
 
     int totalLuck = Pluck - Mluck;
     int random =  rand() % 100;
@@ -46,34 +18,96 @@ char dodge(struct classe player, struct classe mob){
     if(totalLuck > random) return 0;
     else return 1;
 }
+int DodgeM(){
+    float Pluck, Mluck;
 
-char state(struct classe player, struct classe mob){
-    if(player.vie == 0)return 0;
-    if(mob.vie==0)return 1;
+    if(Player.type == 'D') Pluck = 35;
+    else if(Player.type == 'R') Pluck = 10;
+
+    if(Mob.type == 'D') Mluck = 30;
+    else if(Mob.type == 'R') Mluck = 30;
+    else if(Mob.type == 'B') Mluck = 60;
+
+    int totalLuck = Mluck-Pluck;
+    int random =  rand() % 100;
+
+    if(totalLuck > random) return 0;
+    else return 1;
+}
+
+void dmgP(){// D distance R rapproché et B boss
+    if (!DodgeM()) return; else{
+        if (Mob.type == 'D' && Player.type == 'R') {
+            Mob.vie -= Player.dmg * 2;
+            return;
+        } else if (Mob.type == 'D' && Player.type == 'D') {
+            Mob.vie -= Player.dmg;
+            return;
+        } else if (Mob.type == 'R' && Player.type == 'D') {
+            Mob.vie -= Player.dmg * 3;
+            return;
+        } else if (Mob.type == 'B') {
+            Mob.vie -= Player.dmg;
+            return;
+        } else if (Mob.type == 'R' && Player.type == 'R') {
+            Mob.vie -= Player.dmg;
+            return;
+        }
+    }
+}
+
+void dmgM(){
+    if (!DodgeP()){
+        return;
+    }else {
+        if (Player.type == 'D' && Mob.type == 'R') {
+            Player.vie -= Mob.dmg * 2;
+            return;
+        } else if (Player.type == 'R' && Mob.type == 'D') {
+            Player.vie -= Mob.dmg*2;
+            return;
+        }else if (Player.type == 'R' && Mob.type == 'R'){
+            Player.vie -= Mob.dmg;
+            return;
+        }else if (Player.type == 'D' && Mob.type == 'D'){
+            Player.vie -= Mob.dmg;
+            return;
+        }else if (Mob.type == 'B'){
+            Player.vie -= Mob.dmg;
+            return;
+        }
+    }
+}
+
+
+
+char state(){
+    if(Player.vie <= 0)return 1;
+    if(Mob.vie<=0)return 0;
     return 2;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-char combat();
 
-struct Joueur {
-    int pointsDeVie;
-    int attaque;
-    int esquive;
-};
-=======
-=======
-// 0 victoire joueur 1 defaite joueur
->>>>>>> e89c0cc966681be777ed3a0ca696f4e348abeaef
-char combat(struct classe player, struct classe mob){
-    if (state(struct classe player, struct classe mob)==2){
-        dmgP(struct classe player, struct classe mob);
-        if (state(struct classe player, struct classe mob)==2) {
-            dmgM(struct classe mob, struct classe player);
-            return combat(struct classe player, struct classe mob);
+
+int combat(){
+    int tmp;
+    int tmp_life;
+    if (state()==2){
+        printf("Joueur :%d, Mob :%d\n",Player.vie, Mob.vie);
+        printf("1. attaquer :\n");
+        scanf("%d", &tmp);
+        getchar();
+        if(tmp==1){
+            dmgP();
+            if (state()==2){
+                printf("Votre enemie attaque\n");
+                tmp_life = Player.vie;
+                dmgM();
+                if (Player.vie == tmp_life) printf("Vous avez esquivé \n");
+                return combat();
+            }
         }
-    }else if (state(struct classe player, struct classe mob)==0) return 1;
-    else if (state(struct classe player, struct classe mob)==1) return 0;
+    }
+    else if (state()==0) {return 0;}
+    else if (state()==1) {return 1;}
 }
->>>>>>> 936c5ea9c60e3f9dd9521f773321573745fb5cf9
