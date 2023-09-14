@@ -39,3 +39,9 @@ Une fois le joueur initialisé et les ennemis créés, le système de combat ini
 Le programme narratif utilise le système de combat pour créer une expérience de jeu. Le joueur doit réussir une série de combats pour progresser dans l'histoire, atteindre le boss final et accomplir l'objectif de venger sa sœur.
 L'intégration réussie de ces trois programmes offre une expérience de jeu avec un contexte narratif, une progression basée sur des combats stratégiques et une personnalisation du personnage. Cependant, ce projet peut encore être étendu pour inclure davantage de fonctionnalités, de niveaux, d'objets, de capacités spéciales, et d'autres éléments pour améliorer l'expérience globale du joueur et créer un jeu plus complet et riche en fonctionnalités.
 
+NOS DIFFICULTES
+Pour commencer le projet, nous avons essayé de nous organiser une première fois. Après avoir été répartis dans nos groupes, nous avons tous commencé à coder. Le problème fut que même si nous avions le même projet, nous avons tous répondu au problème différemment, et de ce fait nos programmes ne pouvaient pas concorder. 
+Nous avons donc essayé de réorganiser les tâches de chacun, dans le but de cette fois faire concorder les données et les idées de tout le monde le plus précisément possible.
+Ensuite, certains d’entre nous ont rencontré des problèmes techniques concernant github.
+En effet, il nous arrive parois qu’au moment de push, cela écrase les données précédentes, ce qui nous fait perdre une partie du programme.
+Enfin, le fait que le délai accordé ne soit que de 3 jours nous a peut-être effrayé au début, mais cela nous a encouragé à fournir les efforts nécessaires dans ce projet, ce qui nous en rend d’autant plus fiers maintenant.
