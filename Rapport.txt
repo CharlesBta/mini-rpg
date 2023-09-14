@@ -22,7 +22,7 @@ Ce programme est constitué de plusieurs fonctions :
 -	dmgP et dmgM calculent les dégâts infligés respectivement par le joueur et l'ennemi, en prenant en compte les types d'entités et les résultats des esquives.
 -	state contrôle l'état du combat en vérifiant les points de vie du joueur et de l'ennemi.
 -	combat gère les tours de combat, affiche l'état actuel, permet au joueur d'attaquer et calcule les dégâts.
--	
+
 HISTOIRE
 Rôle :
 Le programme "Histoire" est un élément crucial du jeu qui intègre la narration, la personnalisation du personnage et les combats pour créer une expérience de jeu complète et immersive. Il apporte une dimension émotionnelle à l'expérience du joueur en le plongeant dans une quête de vengeance.
