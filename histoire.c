@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include "Combat.c"
 #include "classe.c"
-#include "Player.c"
-#include "Ennemie.c"
+
 
 char pseudo;
 char classe;

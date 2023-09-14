@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "histoire.c"
-#include "classe.c"
+#include "type.c"
+
 
 int main() {
+    printf("Hello world\n");
     start();
-    //maj(pseudo,classe);
-    //printf("%d",player.type);
+    maj(pseudo,classe);
+    printf("%c",Player.type);
     return 0;
 }
