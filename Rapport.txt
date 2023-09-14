@@ -1,1 +1,33 @@
+Ce rapport détaille l’organisation de notre travail de groupe dans le but de créer un mini RPG. Le plus dur était de tous s’accorder dans nos programmes, autant au niveau des variables que des fonctions, car travailler à 8 n’était pas toujours évident. Chacun des programmes a un rôle spécifique dans le jeu, et leur fonctionnement collaboratif est essentiel pour la réussite du projet.
+
+INITIALISATION DU JOUEUR 
+Rôle :
+Ce programme permet au joueur de personnaliser son personnage en choisissant un pseudo et une spécialisation.
+Fonctionnement :
+Le programme commence par afficher une introduction narrative, puis invite le joueur à choisir un pseudo (une lettre) et une spécialisation (rapprochée 'R' ou distance 'D'). Ces données sont stockées dans la structure Player, qui contient également des informations sur la vie et les dégâts du joueur.
+
+CREATION DES ENNEMIS 
+Rôle :
+Le programme de création d'ennemi génère des ennemis en fonction de la situation du jeu, notamment des ennemis normaux et un boss final.
+Fonctionnement :
+Ce programme définit une structure pour représenter les ennemis et utilise une fonction creat_mob pour créer des ennemis en fonction de leur spécialisation (rapprochée ou distance). Les données de l'ennemi sont stockées dans la structure Mob, qui comprend également des informations sur la vie et les dégâts de l'ennemi. 
+
+COMBATS
+Rôle :
+Le programme de système de combat est le pilier du mini rpg, fournissant les mécanismes nécessaires pour gérer les combats entre le joueur et les ennemis.
+
+Fonctionnement :
+Ce programme est constitué de plusieurs fonctions :
+-	DodgeP et DodgeM déterminent si le joueur ou l'ennemi réussit à esquiver une attaque en fonction de la chance et des types d'entités.
+-	dmgP et dmgM calculent les dégâts infligés respectivement par le joueur et l'ennemi, en prenant en compte les types d'entités et les résultats des esquives.
+-	state contrôle l'état du combat en vérifiant les points de vie du joueur et de l'ennemi.
+-	combat gère les tours de combat, affiche l'état actuel, permet au joueur d'attaquer et calcule les dégâts.
+-	
+HISTOIRE
+Rôle :
+Le programme "Histoire" est un élément crucial du jeu qui intègre la narration, la personnalisation du personnage et les combats pour créer une expérience de jeu complète et immersive. Il apporte une dimension émotionnelle à l'expérience du joueur en le plongeant dans une quête de vengeance.
+Fonctionnement :
+Le joueur progresse dans l'histoire en remportant une série de combats contre différents types d'ennemis. Les combats sont une partie intégrante de la progression narrative. En effet, le succès du joueur dans les combats détermine l'issue de l'histoire.
+Le programme utilise des structures de données pour stocker les informations du joueur et des ennemis. Cela permet une gestion efficace des données et facilite la mise en place des combats et de l'histoire.
+Ainsi, l'histoire donne un contexte clair au joueur et un antagoniste (le monstre "$"). Cela crée une motivation pour le joueur et rend les combats significatifs.
 
